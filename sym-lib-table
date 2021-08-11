@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Valpo-PCB-Ruler-cache)(type Legacy)(uri ${KIPRJMOD}/Valpo-PCB-Ruler-cache.lib)(options "")(descr ""))
+  (lib (name Valpo-PCB-Ruler)(type Legacy)(uri ${KIPRJMOD}/Valpo-PCB-Ruler.lib)(options "")(descr ""))
+)
