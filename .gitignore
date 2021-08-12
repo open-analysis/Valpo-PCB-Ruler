@@ -4,3 +4,6 @@
 *.csv
 *.tsv
 *.xml
+_autosave*
+*.sch-bak
+*.kicad_pcb-bak

@@ -18,38 +18,23 @@ Entry Wire Line
 $Comp
 L power:GND #PWR0101
 U 1 1 6114206A
-P 4700 3400
-F 0 "#PWR0101" H 4700 3150 50  0001 C CNN
-F 1 "GND" H 4705 3227 50  0000 C CNN
-F 2 "" H 4700 3400 50  0001 C CNN
-F 3 "" H 4700 3400 50  0001 C CNN
-	1    4700 3400
+P 4700 3050
+F 0 "#PWR0101" H 4700 2800 50  0001 C CNN
+F 1 "GND" H 4705 2877 50  0000 C CNN
+F 2 "" H 4700 3050 50  0001 C CNN
+F 3 "" H 4700 3050 50  0001 C CNN
+	1    4700 3050
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR0102
 U 1 1 61142C9F
-P 4700 1300
-F 0 "#PWR0102" H 4700 1150 50  0001 C CNN
-F 1 "+5V" H 4715 1473 50  0000 C CNN
-F 2 "" H 4700 1300 50  0001 C CNN
-F 3 "" H 4700 1300 50  0001 C CNN
-	1    4700 1300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4700 1300 4700 1650
-Wire Wire Line
-	4700 2850 4700 3400
-$Comp
-L MCU_Microchip_ATtiny:ATtiny85-20PU U1
-U 1 1 61146036
-P 4700 2250
-F 0 "U1" H 4171 2296 50  0000 R CNN
-F 1 "ATtiny85-20PU" H 4171 2205 50  0000 R CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 4700 2250 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 4700 2250 50  0001 C CNN
-	1    4700 2250
+P 4700 1100
+F 0 "#PWR0102" H 4700 950 50  0001 C CNN
+F 1 "+5V" H 4715 1273 50  0000 C CNN
+F 2 "" H 4700 1100 50  0001 C CNN
+F 3 "" H 4700 1100 50  0001 C CNN
+	1    4700 1100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -63,61 +48,292 @@ F 3 "" H 5700 2450 50  0001 C CNN
 	1    5700 2450
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5300 2450 5700 2450
 Text Label 5550 2050 0    50   ~ 0
-D+
-Text Label 5550 2150 0    50   ~ 0
 D-
+Text Label 5550 2150 0    50   ~ 0
+D+
+$Comp
+L Valpo-PCB-Ruler:USB_Board U2
+U 1 1 6114E671
+P 8800 3800
+F 0 "U2" H 8833 3925 50  0000 C CNN
+F 1 "USB_Board" H 8833 3834 50  0000 C CNN
+F 2 "Valpo-PCB-Ruler-FP:USB_Board" H 8800 3800 50  0001 C CNN
+F 3 "" H 8800 3800 50  0001 C CNN
+	1    8800 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 6114F3C4
+P 9100 4250
+F 0 "#PWR0103" H 9100 4000 50  0001 C CNN
+F 1 "GND" H 9105 4077 50  0000 C CNN
+F 2 "" H 9100 4250 50  0001 C CNN
+F 3 "" H 9100 4250 50  0001 C CNN
+	1    9100 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 61150D1A
+P 9250 3900
+F 0 "#PWR0104" H 9250 3750 50  0001 C CNN
+F 1 "+5V" V 9265 4028 50  0000 L CNN
+F 2 "" H 9250 3900 50  0001 C CNN
+F 3 "" H 9250 3900 50  0001 C CNN
+	1    9250 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9000 3900 9250 3900
+Wire Wire Line
+	9000 4200 9100 4200
+Wire Wire Line
+	9100 4200 9100 4250
+Wire Wire Line
+	9000 4000 9250 4000
+Wire Wire Line
+	9000 4100 9250 4100
+Text Label 9200 4100 0    50   ~ 0
+D-
+Text Label 9200 4000 0    50   ~ 0
+D+
+$Comp
+L Switch:SW_Push SW3
+U 1 1 61156F6F
+P 6950 3900
+F 0 "SW3" H 6950 4185 50  0000 C CNN
+F 1 "SW_Push" H 6950 4094 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_Push_SPST_NO_Alps_SKRK" H 6950 4100 50  0001 C CNN
+F 3 "~" H 6950 4100 50  0001 C CNN
+	1    6950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 61157D6D
+P 6950 3500
+F 0 "SW2" H 6950 3700 50  0000 C CNN
+F 1 "SW_Push" H 7000 3650 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_Push_SPST_NO_Alps_SKRK" H 6950 3700 50  0001 C CNN
+F 3 "~" H 6950 3700 50  0001 C CNN
+	1    6950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 6116A546
+P 6300 2050
+F 0 "#PWR0106" H 6300 1800 50  0001 C CNN
+F 1 "GND" H 6305 1877 50  0000 C CNN
+F 2 "" H 6300 2050 50  0001 C CNN
+F 3 "" H 6300 2050 50  0001 C CNN
+	1    6300 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 6116CE32
+P 6400 3500
+F 0 "JP1" H 6400 3705 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 6400 3614 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 6400 3500 50  0001 C CNN
+F 3 "~" H 6400 3500 50  0001 C CNN
+	1    6400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP3
+U 1 1 6116EBCE
+P 7850 2100
+F 0 "JP3" H 7850 2305 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 7850 2214 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 7850 2100 50  0001 C CNN
+F 3 "~" H 7850 2100 50  0001 C CNN
+	1    7850 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP4
+U 1 1 6116F408
+P 7850 2450
+F 0 "JP4" H 7850 2655 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 7850 2564 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 7850 2450 50  0001 C CNN
+F 3 "~" H 7850 2450 50  0001 C CNN
+	1    7850 2450
+	1    0    0    -1  
+$EndComp
+Text Label 5550 2250 0    50   ~ 0
+PB3
+Text Label 5550 2350 0    50   ~ 0
+PB4
+Wire Wire Line
+	6250 3500 6100 3500
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 6116E521
+P 6400 3900
+F 0 "JP2" H 6400 4105 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 6400 4014 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 6400 3900 50  0001 C CNN
+F 3 "~" H 6400 3900 50  0001 C CNN
+	1    6400 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3900 6100 3900
+Wire Wire Line
+	6550 3900 6750 3900
+Wire Wire Line
+	6550 3500 6750 3500
+Wire Wire Line
+	7700 2450 7550 2450
+Wire Wire Line
+	7700 2100 7550 2100
+Text Label 7550 2100 0    50   ~ 0
+PB3
+Text Label 7550 2450 0    50   ~ 0
+PB4
+Text Label 6100 3500 0    50   ~ 0
+PB3
+Text Label 6100 3900 0    50   ~ 0
+PB4
+$Comp
+L power:GND #PWR0107
+U 1 1 61175F62
+P 7350 4000
+F 0 "#PWR0107" H 7350 3750 50  0001 C CNN
+F 1 "GND" H 7355 3827 50  0000 C CNN
+F 2 "" H 7350 4000 50  0001 C CNN
+F 3 "" H 7350 4000 50  0001 C CNN
+	1    7350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 3500 7350 3500
+Wire Wire Line
+	7350 3500 7350 3900
+Wire Wire Line
+	7150 3900 7350 3900
+Connection ~ 7350 3900
+Wire Wire Line
+	7350 3900 7350 4000
+$Comp
+L Connector:TestPoint TP1
+U 1 1 61178A5D
+P 8350 2100
+F 0 "TP1" H 8408 2218 50  0000 L CNN
+F 1 "LCD_DAT" H 8408 2127 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8550 2100 50  0001 C CNN
+F 3 "~" H 8550 2100 50  0001 C CNN
+	1    8350 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 61179969
+P 8350 2450
+F 0 "TP2" H 8408 2568 50  0000 L CNN
+F 1 "LCD_CLK" H 8408 2477 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8550 2450 50  0001 C CNN
+F 3 "~" H 8550 2450 50  0001 C CNN
+	1    8350 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 6117B77F
+P 9000 2450
+F 0 "TP4" H 9058 2568 50  0000 L CNN
+F 1 "LCD_GND" H 9058 2477 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 9200 2450 50  0001 C CNN
+F 3 "~" H 9200 2450 50  0001 C CNN
+	1    9000 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 6117BCCF
+P 9000 2100
+F 0 "TP3" H 9058 2218 50  0000 L CNN
+F 1 "LCD_VCC" H 9058 2127 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9200 2100 50  0001 C CNN
+F 3 "~" H 9200 2100 50  0001 C CNN
+	1    9000 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2100 8350 2100
+Wire Wire Line
+	9000 2450 9000 2600
+Wire Wire Line
+	9000 2100 9000 2200
+Wire Wire Line
+	9000 2200 9200 2200
+$Comp
+L power:GND #PWR0108
+U 1 1 6117DC08
+P 9000 2600
+F 0 "#PWR0108" H 9000 2350 50  0001 C CNN
+F 1 "GND" H 9005 2427 50  0000 C CNN
+F 2 "" H 9000 2600 50  0001 C CNN
+F 3 "" H 9000 2600 50  0001 C CNN
+	1    9000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0109
+U 1 1 6117E68D
+P 9200 2200
+F 0 "#PWR0109" H 9200 2050 50  0001 C CNN
+F 1 "+5V" V 9215 2328 50  0000 L CNN
+F 2 "" H 9200 2200 50  0001 C CNN
+F 3 "" H 9200 2200 50  0001 C CNN
+	1    9200 2200
+	0    1    1    0   
+$EndComp
 Wire Wire Line
 	5300 2150 5550 2150
 Wire Wire Line
 	5300 2050 5550 2050
+Wire Wire Line
+	4700 2850 4700 3050
+Wire Wire Line
+	5300 2350 5550 2350
+Wire Wire Line
+	5300 2250 5550 2250
+Wire Wire Line
+	5300 2450 5700 2450
 $Comp
-L Valpo-PCB-Ruler:USB_Board U?
-U 1 1 6114E671
-P 6500 1900
-F 0 "U?" H 6533 2025 50  0000 C CNN
-F 1 "USB_Board" H 6533 1934 50  0000 C CNN
-F 2 "Valpo-PCB-Ruler-FP:USB_Board" H 6500 1900 50  0001 C CNN
-F 3 "" H 6500 1900 50  0001 C CNN
-	1    6500 1900
+L MCU_Microchip_ATtiny:ATtiny85-20SU U3
+U 1 1 6115CC38
+P 4700 2250
+F 0 "U3" H 4171 2296 50  0000 R CNN
+F 1 "ATtiny85-20SU" H 4171 2205 50  0000 R CNN
+F 2 "Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm" H 4700 2250 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 4700 2250 50  0001 C CNN
+	1    4700 2250
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
-U 1 1 6114F3C4
-P 6800 2350
-F 0 "#PWR?" H 6800 2100 50  0001 C CNN
-F 1 "GND" H 6805 2177 50  0000 C CNN
-F 2 "" H 6800 2350 50  0001 C CNN
-F 3 "" H 6800 2350 50  0001 C CNN
-	1    6800 2350
+L Switch:SW_Push SW1
+U 1 1 61156456
+P 6100 1950
+F 0 "SW1" H 6100 2235 50  0000 C CNN
+F 1 "SW_Push" H 6100 2144 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_Push_SPST_NO_Alps_SKRK" H 6100 2150 50  0001 C CNN
+F 3 "~" H 6100 2150 50  0001 C CNN
+	1    6100 1950
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 61150D1A
-P 6950 2000
-F 0 "#PWR?" H 6950 1850 50  0001 C CNN
-F 1 "+5V" V 6965 2128 50  0000 L CNN
-F 2 "" H 6950 2000 50  0001 C CNN
-F 3 "" H 6950 2000 50  0001 C CNN
-	1    6950 2000
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	6700 2000 6950 2000
+	6300 1950 6300 2050
 Wire Wire Line
-	6700 2300 6800 2300
+	4700 1100 4700 1650
 Wire Wire Line
-	6800 2300 6800 2350
+	5300 1950 5900 1950
 Wire Wire Line
-	6700 2100 6950 2100
-Wire Wire Line
-	6700 2200 6950 2200
-Text Label 6900 2200 0    50   ~ 0
-D-
-Text Label 6900 2100 0    50   ~ 0
-D+
+	8000 2450 8350 2450
 $EndSCHEMATC
